@@ -5,7 +5,7 @@ Compute  |  VM Scale Sets, Azure Load Balancer, Autoscale, Cloud-Init**
 
 **What I Built**
 
-I deployed a VM Scale Set running Nginx web servers behind an Azure Standard Load Balancer. I configured autoscale rules to automatically add VMs when CPU exceeds 70% and remove them when it drops below 30%. Instead of using a Custom Script Extension, I used cloud-init (Custom data) to install and configure Nginx automatically on every instance at first boot — a more reliable approach I discovered after troubleshooting the extension method. I also registered required Azure resource providers that were missing from my new subscription.
+I deployed a VM Scale Set running Nginx web servers behind an Azure Standard Load Balancer. I configured autoscale rules to automatically add VMs when CPU exceeds 70% and remove them when it drops below 30%. Instead of using a Custom Script Extension, I used cloud-init (Custom data) to install and configure Nginx automatically on every instance at first boot a more reliable approach I discovered after troubleshooting the extension method. I also registered required Azure resource providers that were missing from my new subscription.
 
 **Architecture Diagram:**
 
