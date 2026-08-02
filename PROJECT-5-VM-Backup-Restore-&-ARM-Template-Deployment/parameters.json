@@ -1,0 +1,155 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralus"
+        },
+        "subnetName": {
+            "value": "snet-centralus-1"
+        },
+        "virtualNetworkName": {
+            "value": "vnet-centralus-1"
+        },
+        "publicIpAddressId": {
+            "value": "vm-backup-test-ip"
+        },
+        "pipDeleteOption": {
+            "value": "Detach"
+        },
+        "publicIpAddressName": {
+            "value": "vm-backup-test-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Static"
+        },
+        "publicIpAddressSku": {
+            "value": "Standard"
+        },
+        "publicIpAddressZones": {
+            "value": [
+                "1"
+            ]
+        },
+        "networkInterfaceName": {
+            "value": "vm-backup-test913"
+        },
+        "enableAcceleratedNetworking": {
+            "value": false
+        },
+        "networkSecurityGroupName": {
+            "value": "vm-backup-test-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "Tcp",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "virtualMachineName": {
+            "value": "vm-backup-test"
+        },
+        "virtualMachineComputerName": {
+            "value": "vm-backup-test"
+        },
+        "virtualMachineRG": {
+            "value": "rg-backup-lab"
+        },
+        "virtualMachineZone": {
+            "value": [
+                "1"
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "osDiskDeleteOption": {
+            "value": "Delete"
+        },
+        "nicDeleteOption": {
+            "value": "Detach"
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
+        },
+        "adminUsername": {
+            "value": "azureuser"
+        },
+        "adminPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtzBL2bEkD2Z+g1N+l/S+yWfNDis8vKU6MTsDhGOu6OMRtu7ghotrabLeigbS4zock8TI4ZRnsvD/J41kWOmu50S4kuehxvaHvMmmRZ46EoD3d5ZnRV8366jZIY26jRmi+K8hG9L2yoUD0xV6vVNNL4EDDVWj0QIdL4+lL03oNiCItpEUyZAhsE1xfuuDLLiOI3q+V0cAFDAIQ/ss7IWGba/38llmNXU7bMOaT6gaNES1+RN/c1U30A/wyK9+RxsPQepow5grcxvA2+0k1SFf4AWF0T/rjZKnkDM/y205hQ+/qqOQgh2rtLBEZ8BMn/nl1mhFYdYWGKgrL7juW4vu+KF4IoMYhbc+qeqbJpNXqTSuGzP+O7s63Le2SPEACsq10gpKhg+XAyM/wmxH0k1vN0dzPJ+Dp5vxswzSJ0Xa8ZYzh5vyOSwuAb7JtvSxpJGZNhllTyfRzG3/Sn8Mh6lvu5wPTfbs/z3T5jxhrRgKz1hC3SzbEGa+kCnUWgf0kx5U="
+        },
+        "enablePeriodicAssessment": {
+            "value": "ImageDefault"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "vnetLocation": {
+            "value": "centralus"
+        },
+        "vnetExtendedLocation": {
+            "value": {}
+        },
+        "vnetVirtualNetworkName": {
+            "value": "vnet-centralus-1"
+        },
+        "vnetResourceGroupName": {
+            "value": "rg-backup-lab"
+        },
+        "vnetDeploymentName": {
+            "value": "vnetcentralusTemplateDeployment1783870146537"
+        },
+        "vnetNatGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewayPublicIpAddressesNewNames": {
+            "value": []
+        },
+        "vnetNetworkSecurityGroupsNew": {
+            "value": []
+        },
+        "vnetProperties": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "snet-centralus-1",
+                        "properties": {
+                            "addressPrefixes": [
+                                "172.16.0.0/24"
+                            ]
+                        }
+                    }
+                ],
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "172.16.0.0/16"
+                    ]
+                }
+            }
+        },
+        "tags": {}
+    }
+}
