@@ -5,7 +5,7 @@ Monitor & Maintain  |  Azure Monitor, Log Analytics, Alerts, KQL, Custom Dashboa
 
 **What I Built**
 
-I built a centralised monitoring setup for a VM in Central US using Azure Monitor and Log Analytics. I created a Log Analytics workspace and connected vm-monitored to it using a Data Collection Rule — collecting CPU, memory, disk, and network performance metrics. I configured diagnostic settings to send VM metrics and the subscription Activity Log to the workspace. I created an alert rule that emails me when CPU exceeds 80%, triggered it with a CPU stress test, and confirmed the alert email arrived. I ran KQL queries against the Log Analytics workspace to analyse CPU performance data as a time chart. Finally I built a custom Azure Dashboard pinning CPU, network, and disk metrics alongside the KQL chart. 
+I built a centralised monitoring setup for a VM in Central US using Azure Monitor and Log Analytics. I created a Log Analytics workspace and connected vm-monitored to it using a Data Collection Rule, collecting CPU, memory, disk, and network performance metrics. I configured diagnostic settings to send VM metrics and the subscription Activity Log to the workspace. I created an alert rule that emails me when CPU exceeds 80%, triggered it with a CPU stress test, and confirmed the alert email arrived. I ran KQL queries against the Log Analytics workspace to analyse CPU performance data as a time chart. Finally I built a custom Azure Dashboard pinning CPU, network, and disk metrics alongside the KQL chart. 
 
 **Architecture Diagram**
 
@@ -152,9 +152,10 @@ Custom Azure Dashboard	Built a custom dashboard pinning CPU metrics chart, netwo
 Problem 1: No data in Log Analytics after 5 minutes
 
 •	No data in Log Analytics after 5 minutes — wait 10-15 minutes after creating the DCR before expecting data. The Azure Monitor Agent installs asynchronously and data ingestion has a lag
-What I Learned
 
-This project completed the monitoring picture that the previous six projects were missing. The most important conceptual lesson was understanding the difference between Azure Monitor Metrics and Azure Monitor Logs — Metrics are fast, cheap, and great for real-time alerting, while Logs are more powerful for analysis but have higher latency and cost. Seeing both in the same lab made the distinction genuinely concrete rather than just a definitional difference. Writing KQL queries against real performance data I had generated myself — including the CPU spike from the stress test — made the language feel practical rather than academic. The custom dashboard is also the single most visually impressive screenshot in the entire portfolio series: a single pane showing CPU, network, disk, and alert state simultaneously is something that immediately communicates operational maturity to anyone reviewing the work. I also learned that the Data Collection Rule architecture (AMA + DCR) is meaningfully different from the older Log Analytics Agent approach — and knowing that distinction is an exam question.
+**What I Learned**
+
+This project completed the monitoring picture that the previous six projects were missing. The most important conceptual lesson was understanding the difference between Azure Monitor Metrics and Azure Monitor Logs. Metrics are fast, cheap, and great for real-time alerting, while Logs are more powerful for analysis but have higher latency and cost. Seeing both in the same lab made the distinction genuinely concrete rather than just a definitional difference. Writing KQL queries against real performance data I had generated myself, including the CPU spike from the stress test, made the language feel practical rather than academic. The custom dashboard is also the single most visually impressive screenshot in the entire portfolio series: a single pane showing CPU, network, disk, and alert state simultaneously is something that immediately communicates operational maturity to anyone reviewing the work. I also learned that the Data Collection Rule architecture (AMA + DCR) is meaningfully different from the older Log Analytics Agent approach, and knowing that distinction is an exam question.
 
 **What I'd Do Differently / Next Steps**
 
