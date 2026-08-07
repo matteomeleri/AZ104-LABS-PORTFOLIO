@@ -3,7 +3,8 @@
 **Azure Policy & Cost Governance
 Identity & Governance  |  Azure Policy, Management Groups, Cost Management**
 
-What I Built
+**What I Built**
+
 Built a governance layer using Management Groups and Azure Policy. I enforced mandatory tagging on all resources, restricted which Virtual Machines sizes and regions could be used, and set up a budget alert to avoid overspending. 
 
 **Architecture Diagram:**
