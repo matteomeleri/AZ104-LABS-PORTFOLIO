@@ -5,7 +5,7 @@ Compute  |  ARM Templates, Azure Backup, Recovery Services Vault, VM Restore**
 
 **What I Built**
 
-I deployed a VM (vm-backup-test) and exported its ARM template as a reusable Infrastructure as Code artifact, and successfully redeployed it into a resource group by fixing the exported parameters.json file. I then configured Azure Backup on the VM using a Recovery Services Vault with a custom daily backup policy, triggered an on-demand backup, and performed a full VM restore — creating an identical vm-restored instance from the backup recovery point. This project covers two major AZ-104 exam areas in one lab: Infrastructure as Code (ARM templates) and backup and recovery (RPO/RTO concepts, Recovery Services Vault, and the three restore types available in Azure Backup).
+I deployed a VM (vm-backup-test) and exported its ARM template as a reusable Infrastructure as Code artifact, and successfully redeployed it into a resource group by fixing the exported parameters.json file. I then configured Azure Backup on the VM using a Recovery Services Vault with a custom daily backup policy, triggered an on-demand backup, and performed a full VM restore creating an identical vm-restored instance from the backup recovery point. This project covers two major AZ-104 exam areas in one lab: Infrastructure as Code (ARM templates) and backup and recovery (RPO/RTO concepts, Recovery Services Vault, and the three restore types available in Azure Backup).
 
 **Architecture Diagram**
 
